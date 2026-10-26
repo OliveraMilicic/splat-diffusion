@@ -302,7 +302,7 @@ node). The working philosophy throughout:
 
 ## Credits
 
-Built by **Miloš Nikolić** (and teammate) for **PSI:ML** (Petnica School of
+Built by **Miloš Nikolić** and **Olivera Miličić** for **PSI:ML** (Petnica School of
 Machine Learning), 2025. Backbone adapted from
 [PointTransformerV3](https://github.com/Pointcept/PointTransformerV3);
 diffusion preconditioning informed by [NVlabs/edm](https://github.com/NVlabs/edm)
