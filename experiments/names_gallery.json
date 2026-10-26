@@ -1,0 +1,92 @@
+{
+  "rule": "chroma-stratified shortlist of 48 (seed 3), chosen by eye from the contact sheet, ordered by chroma",
+  "why": [
+    "'looks nice' is not measurable, so the measurable part is done by rule and the",
+    "last step is taste, recorded here so the gallery stays reproducible.",
+    "",
+    "Selection was made from reports/gallery_candidates.png, produced by",
+    "  python experiments/slide_renders.py contact --n 48 --seed 3 --azimuth 35",
+    "Chosen for DISTINCT SILHOUETTES above all — a row of generic four-legged",
+    "chairs tells an audience nothing about the dataset's variety.",
+    "",
+    "TWO LISTS, and they are not the same list. `names` is the RENDER SET: which",
+    "objects slide_renders.py rasterizes to gallery_NN.png, in slot order. Slide 5",
+    "shows `slide_row`, a chosen subset, and the slide resolves each entry to a",
+    "tile BY OBJECT NAME through the render manifest — never by slot index. That",
+    "seam is deliberate: slot numbering shifts whenever the render set changes,",
+    "and a slide addressing tiles by number silently shows different chairs when",
+    "it does.",
+    "",
+    "The composition is NOT a free choice: 3 of the 6 in slide_row sit below",
+    "chroma 0.05, against 51.3% of the training split. The row therefore matches",
+    "the dataset's achromatic fraction to within a percent, which matters because",
+    "the chroma histogram beside it on the slide makes exactly that claim. A",
+    "prettier row with five colourful chairs would have contradicted its own",
+    "figure. s05_data.py recomputes both numbers from chair_colour_stats.csv at",
+    "build time rather than reading them from here, so the caption cannot drift",
+    "away from the row it sits under.",
+    "",
+    "Supersedes the seed-0 / 32-candidate set. Same rule, wider shortlist, and the",
+    "shapes were the deciding criterion the second time rather than an afterthought."
+  ],
+  "names": [
+    "03001627-2249c62788a52c61613f0dbd986ed6f8",
+    "03001627-c3bc47657b691c51e6fe3612af521500",
+    "03001627-73fee38797aeced4de03ab2a27ba7531",
+    "03001627-2d1f6e50aad6d88721fbac718728a36d",
+    "03001627-5bd08666f29e946c988a5637d6d8f36a",
+    "03001627-7a79fdfdd72f06e9f8bc1f8036e08e44",
+    "03001627-9d6fdcf7fd47fb5af22166a43d725fc9",
+    "03001627-2ae70fbab330779e3bff5a09107428a5",
+    "03001627-cb78334a5ad9517d7a31dd5af93fdb5c"
+  ],
+  "shapes": [
+    "folding chair",
+    "floating cantilever slab",
+    "moulded shell on a wire base",
+    "salon chair with headrest",
+    "blue cantilever office chair",
+    "floral-upholstered armchair",
+    "carved gilt armchair",
+    "ornate magenta chair",
+    "swivel office chair on a five-star base"
+  ],
+  "slide_row": {
+    "ordered_by": "chroma ascending — the row reads left-to-right as the histogram below it",
+    "chosen_by": [
+      "Five picked by the presenter off the rendered set: the swivel office chair,",
+      "the salon chair, the blue cantilever, the carved gilt armchair and the",
+      "ornate magenta chair.",
+      "",
+      "The moulded shell was added to make six. Two reasons, both structural: it",
+      "carries the only thin-wire base in the row (the other five all stand on",
+      "solid or tubular legs), and it is achromatic, which takes the row from 2",
+      "grey of 5 to 3 of 6 — 50% against the split's 51.3%. At five the row",
+      "undersold how grey this dataset is by eleven points, directly under a",
+      "histogram whose whole point is that number."
+    ],
+    "names": [
+      "03001627-cb78334a5ad9517d7a31dd5af93fdb5c",
+      "03001627-73fee38797aeced4de03ab2a27ba7531",
+      "03001627-2d1f6e50aad6d88721fbac718728a36d",
+      "03001627-5bd08666f29e946c988a5637d6d8f36a",
+      "03001627-9d6fdcf7fd47fb5af22166a43d725fc9",
+      "03001627-2ae70fbab330779e3bff5a09107428a5"
+    ]
+  },
+  "camera": {
+    "azimuth": 35.0,
+    "elev": 20.0,
+    "note": [
+      "The row's camera. The swivel office chair currently has no tile at this",
+      "azimuth — it was rasterized before slide_renders.py grew --azimuth, so the",
+      "only render of it on disk is dead-on front (azimuth 0). s05_data.py prefers",
+      "a tile matching this camera, falls back to whatever exists, and states the",
+      "mismatch in the footnote. Re-rendering the gallery on a GPU node fixes it",
+      "with no edit to any script:",
+      "  python experiments/slide_renders.py gallery --azimuth 35 --elev 20"
+    ]
+  },
+  "grey_cut": 0.05,
+  "dataset_fraction_below_cut": 0.513
+}

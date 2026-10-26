@@ -1,0 +1,17 @@
+{
+  "rule": "the four objects from runs/overfit_4obj_32k — the PLAN.md day-2 overfit gate, rendered in reports/overfit_render_overfit_4obj_32k.png. They are simply the first four names of the train split (train/overfit.py takes split['train'][:k]), so this file pins them explicitly rather than depending on that slicing staying put.",
+  "n": 4,
+  "note": "Two of the four are achromatic (chroma 0.001) — this set is a MEMORISATION demo, not a colour demo. experiments/names_colourful.json is the colour one.",
+  "names": [
+    "03001627-1022fe7dd03f6a4d4d5ad9f13ac9f4e7",
+    "03001627-1055f78d441d170c4f3443b22038d340",
+    "03001627-107caefdad02cf1c8ab8e68cb52baa6a",
+    "03001627-11358c94662a68117e66b3e5c11f24d4"
+  ],
+  "stats": {
+    "03001627-1022fe7dd03f6a4d4d5ad9f13ac9f4e7": {"chroma": 0.001, "hue_mean": 235.0, "frac_brown": 0.00, "rgb": [0.20, 0.20, 0.20]},
+    "03001627-1055f78d441d170c4f3443b22038d340": {"chroma": 0.254, "hue_mean": 52.7, "frac_brown": 0.12, "rgb": [0.40, 0.37, 0.15]},
+    "03001627-107caefdad02cf1c8ab8e68cb52baa6a": {"chroma": 0.001, "hue_mean": 250.4, "frac_brown": 0.00, "rgb": [0.40, 0.40, 0.40]},
+    "03001627-11358c94662a68117e66b3e5c11f24d4": {"chroma": 0.153, "hue_mean": 1.0, "frac_brown": 0.01, "rgb": [0.32, 0.18, 0.18]}
+  }
+}

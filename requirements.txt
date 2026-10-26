@@ -1,0 +1,17 @@
+# Core
+torch>=2.1            # trained on 2.11.0 + CUDA 12.8
+numpy>=1.24
+scipy>=1.10
+plyfile>=1.0         # read/write 3DGS .ply files
+diffusers>=0.27      # noise schedule / DPM-Solver sampler
+matplotlib>=3.7
+pandas>=2.0
+Pillow>=10.0
+
+# Evaluation metrics
+torchmetrics>=1.2
+lpips>=0.1.4
+
+# Optional
+gsplat>=1.0          # GPU 3DGS rasterization (a CPU point-renderer fallback exists)
+wandb>=0.16          # experiment logging (runs offline if not authenticated)
